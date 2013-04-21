@@ -23,7 +23,7 @@ To run on a distributed cluster:
 ```bash
 lein uberjar
 # copy jar to nimbus, and then on nimbus:
-bin/storm jar path/to/uberjar.jar raspberry-storm.TopologySubmitter workers 30 debug false
+bin/storm jar path/to/uberjar.jar raspberry_storm.TopologySubmitter workers 30 debug false
 ```
 
 or use `[storm-deploy](https://github.com/nathanmarz/storm-deploy/wiki)`
