@@ -20,9 +20,10 @@ https://github.com/nathanmarz/storm/wiki/Clojure-DSL"
    [java.io PushbackReader]))
 
 (def twitter-conf
-  (binding [*read-eval* false]
-    (with-open [r (io/reader "config/twitter.clj")]
-      (read (PushbackReader. r)))))
+  {:consumer-token      ""
+   :consumer-key        ""
+   :access-token        ""
+   :access-token-secret ""})
 
 (def oath-creds
   (make-oauth-creds (twitter-conf :consumer-token)

@@ -6,7 +6,7 @@
 
 (defn -main [& {debug "debug" workers "workers" :or {debug "false" workers "4"}}]
   (StormSubmitter/submitTopology
-   "raspberry-storm topology"
+   "raspberry-storm"
    {TOPOLOGY-DEBUG (Boolean/parseBoolean debug)
     TOPOLOGY-WORKERS (Integer/parseInt workers)}
    (stormy-topology)))
